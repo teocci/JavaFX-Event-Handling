@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane
+        xmlns="http://javafx.com/javafx/8"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.github.teocci.codesample.eventhandling.controller.EventHandlingController"
+        minWidth="315"
+        prefHeight="307"
+        prefWidth="421">
+    <VBox
+            id="VBox"
+            alignment="BASELINE_LEFT"
+            layoutX="14"
+            layoutY="17"
+            spacing="5">
+        <Button
+                fx:id="myButton"
+                mnemonicParsing="false"
+                prefWidth="-1"
+                text="Button"
+                VBox.vgrow="SOMETIMES"/>
+        <CheckBox
+                fx:id="myCheckBox"
+                mnemonicParsing="false"
+                text="CheckBox"/>
+        <ComboBox fx:id="myComboBox">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1"/>
+                    <String fx:value="Item 2"/>
+                    <String fx:value="Item 3"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Hyperlink fx:id="myHyperlink" text="Hyperlink"/>
+        <Slider fx:id="mySlider"/>
+        <TextField fx:id="myTextField" prefWidth="168"/>
+    </VBox>
+    <ListView
+            fx:id="myListView"
+            layoutX="212"
+            layoutY="17"
+            prefHeight="154"
+            prefWidth="196"/>
+    <TextArea
+            fx:id="outputTextArea"
+            layoutX="13"
+            layoutY="194"
+            prefHeight="99"
+            prefWidth="395"
+            wrapText="true"/>
+    <Separator
+            layoutX="14"
+            layoutY="182"
+            prefWidth="395"/>
+</AnchorPane>
